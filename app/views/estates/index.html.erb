@@ -1,0 +1,43 @@
+<div class="jumbotron">
+<div class="container">
+  <h1><strong>All Estates</strong></h1>
+</div>
+</div>
+<div class="container">
+
+<%= button_to 'New Estate', new_estate_path, :id => "open-contacts-dialog-btn",
+      :class => "inbox-sf-add-btn tip", :method => :get %>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Estate address</th>
+            <th scope="col">Area</th>
+            <th scope="col">Bedrooms</th>
+            <th scope="col">Bathrooms</th>
+            <th scope="col">Square footage</th>
+            <th scope="col">Rent</th>
+            <th scope="col">Show</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Destroy</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @estates.each do |estate| %>
+          <tr>
+            <td><%= estate.estate_address %></td>
+            <td><%= estate.area %></td>
+            <td><%= estate.bedrooms %></td>
+            <td><%= estate.bathrooms %></td>
+            <td><%= estate.square_footage %></td>
+            <td><%= estate.rent %></td>
+            <td><%= link_to 'Show', estate %></td>
+            <td><%= link_to 'Edit', edit_estate_path(estate) %></td>
+            <td><%= link_to 'Destroy', estate, 
+                    method: :delete, 
+                          data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+</div>
+

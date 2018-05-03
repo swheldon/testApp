@@ -1,0 +1,73 @@
+<div class="jumbotron">
+<div class="container">
+ <h1><strong>Show Tenant</strong></h1>
+</div>
+</div>
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <p>
+          <h1><%= @tenant.first_name %> <%= @tenant.last_name %></h1>
+        </p>
+             
+        <p>
+          <strong>Address:</strong>
+          <%= @tenant.address %>
+        </p>
+
+        <p>
+          <strong>Phone Number:</strong>
+          <%= @tenant.phone_number %>
+        </p>
+
+        <p>
+          <strong>E-mail address:</strong>
+          <%= @tenant.email %>
+        </p>
+            
+        <p>
+          <strong>Employment Status:</strong>
+          <%= @tenant.employment_status %>
+        </p>
+
+        <p>
+          <strong>Tenant Count:</strong>
+          <%= @tenant.tenant_count %>
+        </p>
+            
+        <p>
+          <strong>Move In Date:</strong>
+          <%= @tenant.move_in_date %>
+        </p>
+
+        <p>
+          <strong>Months of Term:</strong>
+          <%= @tenant.term_months %>
+        </p>
+
+        <p>
+          <strong>Furnished or Unfurnished:</strong>
+          <%= @tenant.furnished %>
+        </p>
+
+        <p>
+          <strong>Source of Lead:</strong>
+          <%= @tenant.lead_source %>
+        </p>
+
+        <p>
+          <strong>Special Requirements:</strong>
+          <%= @tenant.special_requirements %>
+        </p>
+
+
+        <%= link_to 'Edit', edit_tenant_path(@tenant) %> |
+        <%= link_to 'Back', tenants_path %>
+
+      </div>
+  </div>
+</div>
+
+ 
+

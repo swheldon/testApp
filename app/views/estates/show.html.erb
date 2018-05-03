@@ -1,0 +1,47 @@
+<div class="jumbotron">
+<div class="container">
+ <h1><strong>Show Estate</strong></h1>
+</div>
+</div>
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <p>
+          <h1><%= @estate.estate_address %></h1>
+        </p>
+             
+        <p>
+          <strong>Area:</strong>
+          <%= @estate.area %>
+        </p>
+
+        <p>
+          <strong>Bedrooms:</strong>
+          <%= @estate.bedrooms %>
+        </p>
+
+        <p>
+          <strong>Bathrooms:</strong>
+          <%= @estate.bathrooms %>
+        </p>
+            
+        <p>
+          <strong>Square footage:</strong>
+          <%= @estate.square_footage %>
+        </p>
+
+        <p>
+          <strong>Rent:</strong>
+          <%= @estate.rent %>
+        </p>
+                
+        <%= link_to 'Edit', edit_estate_path(@estate) %> |
+        <%= link_to 'Back', estates_path %>
+
+      </div>
+  </div>
+</div>
+
+ 
+

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  estate_address: MyText
+  area: MyText
+  bedrooms: 1
+  bathrooms: 1
+  square_footage: 1
+  rent: 1
+
+two:
+  estate_address: MyText
+  area: MyText
+  bedrooms: 1
+  bathrooms: 1
+  square_footage: 1
+  rent: 1

@@ -1,0 +1,51 @@
+<div class="jumbotron affix-horizontally">
+<div class="container">
+  <h1><strong>All Tenants</strong></h1>
+</div>
+</div>
+<div class="container">
+
+<%= button_to 'New Tenant', new_tenant_path, :id => "open-contacts-dialog-btn",
+      :class => "inbox-sf-add-btn tip", :method => :get %>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Last Name</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Address</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Email</th>
+            <th scope="col">Employment Status</th>
+            <th scope="col">Tenant Count</th>
+            <th scope="col">Move In Date</th>
+            <th scope="col">Term Months</th>
+            <th scope="col">Furnished</th>
+            <th scope="col">Lead Source</th>
+            <th scope="col">Special Requirements</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @tenants.each do |tenant| %>
+          <tr>
+            <td><%= tenant.last_name %></td>
+            <td><%= tenant.first_name %></td>
+            <td><%= tenant.address %></td>
+            <td><%= tenant.phone_number %></td>
+            <td><%= tenant.email %></td>
+            <td><%= tenant.employment_status %></td>
+            <td><%= tenant.tenant_count %></td>
+            <td><%= tenant.move_in_date %></td>
+            <td><%= tenant.term_months %></td>
+            <td><%= tenant.furnished %></td>
+            <td><%= tenant.lead_source %></td>
+            <td><%= tenant.special_requirements %></td>
+            <td><%= link_to 'Show', tenant %></td>
+            <td><%= link_to 'Edit', edit_tenant_path(tenant) %></td>
+            <td><%= link_to 'Destroy', tenant, 
+                    method: :delete, 
+                          data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+</div>

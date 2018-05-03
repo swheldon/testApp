@@ -1,0 +1,23 @@
+<%= form_with model: @estate, local: true do |form| %>
+   <% if @estate.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@estate.errors.count, "error") %> prohibited this estate from being saved:
+      </h2>
+      <ul>
+        <% estate.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+      <%= bootstrap_form_for(@estate) do |f| %>
+        <%= f.text_field :estate_address, class: "form-control" %>
+        <%= f.text_field :area, class: "form-control" %>
+        <%= f.number_field :bedrooms, in: 1..30, class: "form-control" %>
+        <%= f.number_field :bathrooms, in: 1..30, class: "form-control" %>
+        <%= f.number_field :square_footage, append: "ft", in: 1..50000, class: "form-control" %>
+        <%= f.number_field :rent, prepend: "$", append: ".00", in: 1..100000, class: "form-control" %>
+        <%= f.submit "Update estate"%>
+      <% end %>
+<% end %>

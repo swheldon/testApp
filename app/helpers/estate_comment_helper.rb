@@ -1,0 +1,2 @@
+module EstateCommentHelper
+end

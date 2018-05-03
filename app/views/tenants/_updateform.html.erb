@@ -1,0 +1,29 @@
+<%= form_with model: @tenant, local: true do |form| %>
+  <% if @tenant.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tenant.errors.count, "error") %> prohibited this tenant from being saved:
+      </h2>
+      <ul>
+      <% tenant.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+      <%= bootstrap_form_for(@tenant) do |f| %>
+        <%= f.text_field :last_name, class: "form-control" %>
+        <%= f.text_field :first_name, class: "form-control" %>
+        <%= f.text_field :address, class: "form-control" %>
+        <%= f.text_field :phone_number, class: "form-control" %>
+        <%= f.text_field :email, class: "form-control" %>
+        <%= f.select :employment_status, [["Employed", "Employed"], ["Unemployed", "Unemployed"]], class: "form-control" %>
+        <%= f.number_field :tenant_count, in: 1..30, class: "form-control" %>
+        <%= f.text_field :move_in_date, data:{ provide:'datepicker', class: "form-control" } %>
+        <%= f.number_field :term_months, in: 1..120, class: "form-control" %>
+        <%= f.select :furnished, [["Furnished", "Furnished"], ["Unfurnished", "Unfurnished"]], class: "form-control" %>
+        <%= f.text_field :lead_source, class: "form-control" %>
+        <%= f.text_field :special_requirements, class: "form-control" %>
+        <%= f.submit "Update Tenant"%>
+      <% end %>
+<% end %>
