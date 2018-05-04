@@ -1,4 +1,10 @@
 GIT
+  remote: https://github.com/alexpeattie/heroku_secrets.git
+  revision: 717af8e0acf399bc88d2c8c1a7e230023942af0f
+  specs:
+    heroku_secrets (0.0.2)
+
+GIT
   remote: https://github.com/bootstrap-ruby/bootstrap_form.git
   revision: 077b91d0bf6513e4f6b40d38cdb6a5c71d58dd7b
   branch: master
@@ -206,6 +212,7 @@ DEPENDENCIES
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
+  heroku_secrets!
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)

@@ -12,6 +12,8 @@ gem 'rails', '~> 5.1.4'
 gem 'mysql2', '~> 0.3.18'
 # Use updated bundler
 gem 'bundler'
+# Pass secrets to Heroku without storing them in Github
+gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
