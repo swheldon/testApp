@@ -202,6 +202,7 @@ DEPENDENCIES
   bootstrap (~> 4.0.0)
   bootstrap-datepicker-rails
   bootstrap_form!
+  bundler
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
