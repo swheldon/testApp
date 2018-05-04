@@ -42,4 +42,4 @@ production:
   pool: 5
   username: root
   password: RailsDev!23
-
+  url: <%= ENV['DATABASE_URL'] %>
