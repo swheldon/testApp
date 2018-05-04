@@ -14,6 +14,8 @@ gem 'mysql2', '~> 0.3.18'
 gem 'bundler'
 # Pass secrets to Heroku without storing them in Github
 gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
+# Use rails12factor to precompile assets
+gem 'rails_12factor', group: :production
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
