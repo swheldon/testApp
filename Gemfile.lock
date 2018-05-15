@@ -229,22 +229,14 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
-<<<<<<< HEAD
-  mysql2
-=======
   mysql2 (~> 0.4.10)
->>>>>>> file-upload-features
   puma (~> 3.7)
   rails (~> 5.1.4)
   rails_12factor
   sass-rails (~> 5.0)
   selenium-webdriver
   sequel
-<<<<<<< HEAD
-  shrine
-=======
   shrine (~> 2.0)
->>>>>>> file-upload-features
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
