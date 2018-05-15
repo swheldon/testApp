@@ -40,7 +40,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 # Use Shrine to upload images
 gem 'shrine', '~> 2.0'
-gem 'sequel'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
