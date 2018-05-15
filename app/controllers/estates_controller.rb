@@ -68,6 +68,7 @@ class EstatesController < ApplicationController
     end
   end
 
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_estate
@@ -76,6 +77,6 @@ class EstatesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def estate_params
-      params.require(:estate).permit(:estate_address, :area, :bedrooms, :bathrooms, :square_footage, :rent)
+      params.require(:estate).permit(:estate_address, :area, :bedrooms, :bathrooms, :square_footage, :rent, [:image])
     end
 end

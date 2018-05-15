@@ -21,6 +21,9 @@
 /config/secrets.yml
 app/controllers/articles_controller.rb
 
+# Ignore uploads folder
+public/uploads
+
 /node_modules
 /yarn-error.log
 
