@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180503084631) do
+ActiveRecord::Schema.define(version: 20180511052813) do
 
   create_table "estates", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text "estate_address"
@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 20180503084631) do
     t.integer "rent"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.json "image"
+    t.json "image_data"
   end
 
   create_table "tenants", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
