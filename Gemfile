@@ -9,7 +9,9 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use mysql2 as the database for Active Record
-gem 'mysql2', '~> 0.3.18'
+gem 'mysql2' #, '~> 0.3.18'
+# Use sequel to make rails work better with mysql
+gem 'sequel'
 # Use updated bundler
 gem 'bundler'
 # Pass secrets to Heroku without storing them in Github
@@ -42,6 +44,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.0.0'
 gem "bootstrap_form", git: "https://github.com/bootstrap-ruby/bootstrap_form.git", branch: "master"
+gem 'shrine'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
