@@ -12,18 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :image_data %>
-    <%= form.file_field :image %>
-  </div>
-
-  
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
+    <%= bootstrap_form_for @photo do |f| %>
+    <%= f.file_field :image %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= f.submit %>
   </div>
-
+  <% end %>
 <% end %>

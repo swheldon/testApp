@@ -1,24 +1,25 @@
 require "shrine"
 require "shrine/storage/file_system"
+require 'shrine/storage/s3'
 
 Shrine.storages = {
   cache: Shrine::Storage::FileSystem.new("public", prefix: "uploads/cache"),
   store: Shrine::Storage::FileSystem.new("public", prefix: "uploads/store"),
 }
 
+# Load application secrets
+secrets = Rails.application.secrets
+
 Shrine.plugin :activerecord
 Shrine.plugin :cached_attachment_data # for forms
-
-
-
-# require 'shrine/storage/s3'
+Shrine.plugin :restore_cached_data # re-extract metadata when attaching a cached file
 
 # s3_options = {
 #   # Required
-#   region: 'us-west-1',
-#   bucket: 'swheldon-realestatecentral',
-#   access_key_id: 'swheldon',
-#   secret_access_key: 'Wh3ld0n!'
+#   region: ENV.fetch('S3_OPTIONS_REGION'),
+#   bucket: ENV.fetch('S3_OPTIONS_BUCKET'),
+#   access_key_id: ENV.fetch('S3_OPTIONS_ACCESS_KEY_ID'),
+#   secret_access_key: ENV.fetch('S3_OPTIONS_SECRET_KEY_ACCESS_KEY')
 # }
 
 # # URL options for CloudFront CDN

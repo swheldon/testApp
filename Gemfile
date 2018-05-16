@@ -41,14 +41,14 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+# Use Shrine to upload images
+gem 'shrine'
 # Upload images to Amazon S3
 gem 'aws-sdk-s3'
 # Required for image versioning
 gem 'image_processing'
 # Required for image versioning
 gem 'mini_magick'
-# Use Shrine to upload images
-gem 'shrine'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
