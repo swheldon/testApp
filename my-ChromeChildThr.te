@@ -1,0 +1,14 @@
+
+module my-ChromeChildThr 1.0;
+
+require {
+	type httpd_sys_content_t;
+	type mozilla_plugin_t;
+	class file read;
+}
+
+#============= mozilla_plugin_t ==============
+
+#!!!! The file '/var/www/git/development/testApp/app/assets/stylesheets/_bootstrap-custom.scss' is mislabeled on your system.  
+#!!!! Fix with $ restorecon -R -v /var/www/git/development/testApp/app/assets/stylesheets/_bootstrap-custom.scss
+allow mozilla_plugin_t httpd_sys_content_t:file read;
