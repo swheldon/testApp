@@ -9,8 +9,8 @@ default: &default
   ncoding: utf8
   reconnect: false
   pool: 5
-  username: root
-  password: RailsDev!23
+  username: <%= ENV['MYSQL_AUTHENTICATE_DEFAULT_USER'] %>
+  password: <%= ENV['MYSQL_AUTHENTICATE_DEFAULT_SECRET'] %>
   timeout: 5000
 
 development:
@@ -19,8 +19,8 @@ development:
   reconnect: false
   database: development
   pool: 5
-  username: root
-  password: RailsDev!23
+  username: <%= ENV['MYSQL_AUTHENTICATE_DEV_USER'] %>
+  password: <%= ENV['MYSQL_AUTHENTICATE_DEV_SECRET'] %>
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -31,8 +31,8 @@ test:
   reconnect: false
   database: test
   pool: 5
-  username: root
-  password: RailsDev!23
+  username: <%= ENV['MYSQL_AUTHENTICATE_TEST_USER'] %>
+  password: <%= ENV['MYSQL_AUTHENTICATE_TEST_SECRET'] %>
 
 production:
   adapter: mysql2
@@ -40,6 +40,6 @@ production:
   reconnect: false
   database: production
   pool: 5
-  username: root
-  password: RailsDev!23
+  username: <%= ENV['MYSQL_AUTHENTICATE_PROD_USER'] %>
+  password: <%= ENV['MYSQL_AUTHENTICATE_PROD_SECRET'] %>
   url: <%= ENV['DATABASE_URL'] %>

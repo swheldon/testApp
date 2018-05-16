@@ -15,5 +15,6 @@
 //= require bootstrap-sprockets
 //= require rails-ujs
 //= require bootstrap-datepicker
+//= require dropzone
 //= require turbolinks
 //= require_tree .

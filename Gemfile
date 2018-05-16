@@ -8,7 +8,10 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
-gem 'bootsnap', require: false
+# Load dotenv so rails has all secrets in central location
+gem 'dotenv-rails', require: 'dotenv/rails-now'
+# Use bootsnap so rails loads assets faster
+gem 'bootsnap'
 # Use mysql2 as the database for Active Record
 # Use sequel to make rails work better with mysql
 gem 'sequel'
@@ -38,8 +41,14 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+# Upload images to Amazon S3
+gem 'aws-sdk-s3'
+# Required for image versioning
+gem 'image_processing'
+# Required for image versioning
+gem 'mini_magick'
 # Use Shrine to upload images
-gem 'shrine', '~> 2.0'
+gem 'shrine'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -48,7 +57,9 @@ gem 'jquery-rails'
 gem 'bootstrap', '~> 4.0.0'
 gem "bootstrap_form", git: "https://github.com/bootstrap-ruby/bootstrap_form.git", branch: "master"
 
-
+source 'https://rails-assets.org' do
+  gem 'rails-assets-dropzone'
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

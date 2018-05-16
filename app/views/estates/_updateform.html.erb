@@ -17,7 +17,7 @@
         <%= f.number_field :bathrooms, in: 1..30, class: "form-control" %>
         <%= f.number_field :square_footage, append: "ft", in: 1..50000, class: "form-control" %>
         <%= f.number_field :rent, prepend: "$", append: ".00", in: 1..100000, class: "form-control" %>
-        <%= f.file_field :images, multiple: true %>
+        
         
         <%= f.submit "Update estate"%>
       <% end %>

@@ -1,6 +1,6 @@
 class EstatesController < ApplicationController
   before_action :set_estate, only: [:show, :edit, :update, :destroy]
-  http_basic_authenticate_with name: "dhh", password: "secret",
+  http_basic_authenticate_with name: ENV.fetch('BASIC_AUTHENTICATE_USER'), password: ENV.fetch('BASIC_AUTHENTICATE_SECRET'),
   except: [:index, :show]
   # GET /estates
   # GET /estates.json
@@ -77,6 +77,6 @@ class EstatesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def estate_params
-      params.require(:estate).permit(:estate_address, :area, :bedrooms, :bathrooms, :square_footage, :rent, [:image])
+      params.require(:estate).permit(:estate_address, :area, :bedrooms, :bathrooms, :square_footage, :rent)
     end
 end
