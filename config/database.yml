@@ -35,11 +35,11 @@ test:
   password: <%= ENV['MYSQL_AUTHENTICATE_TEST_SECRET'] %>
 
 production:
-  adapter: mysql2
+  adapter: postgresql
   encoding: utf8
   reconnect: false
   database: production
   pool: 5
-  username: <%= ENV['MYSQL_AUTHENTICATE_PROD_USER'] %>
-  password: <%= ENV['MYSQL_AUTHENTICATE_PROD_SECRET'] %>
-  url: <%= ENV['DATABASE_URL'] %>
+  username: <%= ENV['PG_AUTHENTICATE_PROD_USER'] %>
+  password: <%= ENV['PG_AUTHENTICATE_PROD_SECRET'] %>
+

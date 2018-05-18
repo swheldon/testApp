@@ -12,6 +12,8 @@ gem 'rails', '~> 5.1.4'
 gem 'dotenv-rails', require: 'dotenv/rails-now'
 # Use bootsnap so rails loads assets faster
 gem 'bootsnap'
+# Use PostGreSQL for production database
+gem 'pg'
 # Use mysql2 as the database for Active Record
 gem 'mysql2', '~> 0.4.10'
 # Use updated bundler
