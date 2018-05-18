@@ -10,14 +10,14 @@
       </ul>
     </div>
   <% end %>
-      <%= bootstrap_form_for @estate, {html: {multipart: true}} do |f| %>
+      <%= bootstrap_form_for @estate do |f| %>
         <%= f.text_field :estate_address, class: "form-control" %>
         <%= f.text_field :area, class: "form-control" %>
         <%= f.number_field :bedrooms, in: 1..30, class: "form-control" %>
         <%= f.number_field :bathrooms, in: 1..30, class: "form-control" %>
         <%= f.number_field :square_footage, append: "ft", in: 1..50000, class: "form-control" %>
         <%= f.number_field :rent, prepend: "$", append: ".00", in: 1..100000, class: "form-control" %>
-        <%= f.file_field :images, multiple: true %>
+    
         
         <%= f.submit "Update estate"%>
       <% end %>

@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   
 
+  devise_for :users
   resources :tenants
   resources :estates do
   	#resources:estate_comments
   end
-  resources :photos
 
   get 'welcome/index'
   get "/pages/:page" => "pages#show"

@@ -13,8 +13,6 @@ gem 'dotenv-rails', require: 'dotenv/rails-now'
 # Use bootsnap so rails loads assets faster
 gem 'bootsnap'
 # Use mysql2 as the database for Active Record
-# Use sequel to make rails work better with mysql
-gem 'sequel'
 gem 'mysql2', '~> 0.4.10'
 # Use updated bundler
 gem 'bundler'
@@ -41,8 +39,10 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-# Use Shrine to upload images
-gem 'shrine'
+# Use Devise for user authentication
+gem 'devise'
+# Use carrierwave as file uploader
+gem 'carrierwave'
 # Upload images to Amazon S3
 gem 'aws-sdk-s3'
 # Required for image versioning

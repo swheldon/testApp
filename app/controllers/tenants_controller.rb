@@ -1,6 +1,7 @@
 class TenantsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_tenant, only: [:show, :edit, :update, :destroy]
-  http_basic_authenticate_with name: ENV.fetch('BASIC_AUTHENTICATE_USER'), password: ENV.fetch('BASIC_AUTHENTICATE_SECRET')
+  #http_basic_authenticate_with name: ENV.fetch('BASIC_AUTHENTICATE_USER'), password: ENV.fetch('BASIC_AUTHENTICATE_SECRET')
   # GET /tenants
   # GET /tenants.json
   def index

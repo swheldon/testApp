@@ -27,13 +27,20 @@
               <a class="dropdown-item" href="#">Something else here</a>
             </div>
           </li> -->
-          <li class="nav-item">
-            <a class="nav-link" href="/photos">Show All Photos</a>
-          </li>
+         
           <li class="nav-item">
             <a class="nav-link" href="/pages/about">About us</a>
           </li>
           
+            <% if user_signed_in? %>
+            <li class="nav-item">
+              <a class="nav-link" href="/users/sign_out">Log off</a>
+            </li>
+            <% else %>
+            <li class="nav-item">
+              <a class="nav-link" href="/users/sign_in">Sign In</a>
+            </li>
+            <% end %>
         </ul>
         <!-- <form class="form-inline my-2 my-md-0">
           <input class="form-control" placeholder="Search" type="text">
@@ -51,6 +58,14 @@
   </head>
 
   <body>
+
+    <% unless notice.nil? %>
+    <p class="notice"><%= notice %></p>
+    <% end %>
+
+    <% unless alert.nil? %>
+    <p class="alert"><%= alert %></p>
+    <% end %>
     <%= yield %>
   </body>
 </html>

@@ -1,7 +1,8 @@
 class EstatesController < ApplicationController
+  before_action :authenticate_user! 
   before_action :set_estate, only: [:show, :edit, :update, :destroy]
-  http_basic_authenticate_with name: ENV.fetch('BASIC_AUTHENTICATE_USER'), password: ENV.fetch('BASIC_AUTHENTICATE_SECRET'),
-  except: [:index, :show]
+  #http_basic_authenticate_with name: ENV.fetch('BASIC_AUTHENTICATE_USER'), password: ENV.fetch('BASIC_AUTHENTICATE_SECRET'),
+  #except: [:index, :show]
   # GET /estates
   # GET /estates.json
   def index
