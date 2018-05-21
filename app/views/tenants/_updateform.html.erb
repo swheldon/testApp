@@ -10,7 +10,8 @@
       </ul>
     </div>
   <% end %>
-
+  <div class="container"
+   <div class="row">
       <%= bootstrap_form_for(@tenant) do |f| %>
         <%= f.text_field :last_name, class: "form-control" %>
         <%= f.text_field :first_name, class: "form-control" %>
@@ -26,4 +27,6 @@
         <%= f.text_field :special_requirements, class: "form-control" %>
         <%= f.submit "Update Tenant"%>
       <% end %>
+    </div>
+  </div>
 <% end %>

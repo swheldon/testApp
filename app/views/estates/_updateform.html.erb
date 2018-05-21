@@ -10,6 +10,9 @@
       </ul>
     </div>
   <% end %>
+
+  <div class="container"
+    <div class="row">
       <%= bootstrap_form_for @estate do |f| %>
         <%= f.text_field :estate_address, class: "form-control" %>
         <%= f.text_field :area, class: "form-control" %>
@@ -20,4 +23,6 @@
         
         <%= f.submit "Update estate"%>
       <% end %>
+    </div>
+  </div>
 <% end %>
