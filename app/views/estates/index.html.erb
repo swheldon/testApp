@@ -28,8 +28,8 @@
             <td><%= estate.area %></td>
             <td><%= estate.bedrooms %></td>
             <td><%= estate.bathrooms %></td>
-            <td><%= estate.square_footage %></td>
-            <td><%= estate.rent %></td>
+            <td><%= "#{estate.square_footage} ft" %></td>
+            <td><%= number_to_currency estate.rent %></td>
             <td><%= link_to 'Show', estate %></td>
             <td><%= link_to 'Edit', edit_estate_path(estate) %></td>
             <td><%= link_to 'Destroy', estate, 
