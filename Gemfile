@@ -24,6 +24,8 @@ gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
 gem 'rails_12factor', group: :production
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
+# Use jquery to allow for use of jquery dependant gems
+gem 'jquery-rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -41,6 +43,10 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+# Use bootstrap to build and display responsive html
+gem 'bootstrap', '~> 4.0.0'
+# Use bootstrap_form to quickly create forms in bootstrap
+gem "bootstrap_form", git: "https://github.com/bootstrap-ruby/bootstrap_form.git", branch: "master"
 # Use Devise for user authentication
 gem 'devise'
 # Use devise-bootstrap-views to generate authentication related views in bootstrap 4
@@ -55,13 +61,12 @@ gem 'aws-sdk-s3'
 #gem 'image_processing'
 # Required for image versioning
 #gem 'mini_magick'
-
+# Use Google Maps API for address autocomplete
+# gem '?'
+# Use jquery-datatables for viewing index pages with datatables
+gem 'jquery-datatables'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
-gem 'jquery-rails'
-gem 'bootstrap', '~> 4.0.0'
-gem "bootstrap_form", git: "https://github.com/bootstrap-ruby/bootstrap_form.git", branch: "master"
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-dropzone'

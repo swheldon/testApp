@@ -7,18 +7,18 @@
 
 <%= button_to 'New Estate', new_estate_path, :id => "open-contacts-dialog-btn",
       :class => "inbox-sf-add-btn tip", :method => :get %>
-      <table class="table">
+      <table id="estates" class="display responsive colreorder select-item" style="width:100%">
         <thead>
           <tr>
-            <th scope="col">Estate address</th>
-            <th scope="col">Area</th>
-            <th scope="col">Bedrooms</th>
-            <th scope="col">Bathrooms</th>
-            <th scope="col">Square footage</th>
-            <th scope="col">Rent</th>
-            <th scope="col">Show</th>
-            <th scope="col">Edit</th>
-            <th scope="col">Destroy</th>
+            <th>Estate address</th>
+            <th>Area</th>
+            <th>Bedrooms</th>
+            <th>Bathrooms</th>
+            <th>Square footage</th>
+            <th>Rent</th>
+            <th></th>
+            <th></th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
