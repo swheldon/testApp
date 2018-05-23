@@ -26,6 +26,8 @@ gem 'rails_12factor', group: :production
 gem 'puma', '~> 3.7'
 # Use jquery to allow for use of jquery dependant gems
 gem 'jquery-rails'
+# Use popper to allow for using javascript
+gem 'popper'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
