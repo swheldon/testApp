@@ -4,4 +4,5 @@
 
 $(document).ready ->
   $('#tenants').DataTable colReorder : true
+  buttons: ['copy', 'excel', 'pdf']
   return
