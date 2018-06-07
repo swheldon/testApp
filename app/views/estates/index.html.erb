@@ -1,12 +1,11 @@
 <div class="jumbotron">
 <div class="container">
   <h1><strong>All Estates</strong></h1>
+    <p>Here you can create new estates or search for estates based on your desired criteria. You can also show, update or delete individual estates. The table below is able to be highlighted and copied.</p>
+  <p><a class="btn btn-primary btn-lg" href="estates/new" role="button">New estate &raquo;</a></p>
 </div>
 </div>
-<div class="container">
-    <div class="btn btn-primary">
-      <%= link_to 'New Estate', new_estate_path, :class => "btn", :style=>'color:#FFFFFF;'%>
-    </div>
+<div class="container">    
       <table id="estates" class="display dt-responsive colreorder select-item" style="width:100%">
         <thead>
           <tr>

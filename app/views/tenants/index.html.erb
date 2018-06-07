@@ -1,12 +1,11 @@
 <div class="jumbotron">
 <div class="container">
   <h1><strong>All Tenants</strong></h1>
+  <p>Here you can create new tenants and search for tenants based on your desired criteria. You can also show, update or delete individual tenants. The table below is able to be highlighted and copied.</p>
+  <p><a class="btn btn-primary btn-lg" href="tenants/new" role="button">New tenant &raquo;</a></p>
 </div>
 </div>
-<div class="container">
-    <div class="btn btn-primary">
-      <%= link_to 'New Tenant', new_tenant_path, :class => "btn", :style=>'color:#FFFFFF;'%>
-    </div>
+<div class="container">    
       <table id="tenants" class="display dt-responsive colreorder select-item" style="width:100%">
         <thead>
           <tr>
