@@ -23,16 +23,17 @@
           <li class="nav-item">
             <a class="nav-link" href="/estates">Estates</a>
           </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="/pages/about">About us</a>
-          </li>
           
             <% if current_user.try(:admin?)%>
             <li class="nav-item">
               <a class="nav-link" href="/admin">Admin</a>
             </li>
             <% end %>
+
+          <li class="nav-item">
+          <a class="nav-link" href="/pages/about">About us</a>
+          </li>
+          
 
             <% if user_signed_in? %>
             <li class="nav-item">
