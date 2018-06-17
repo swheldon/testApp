@@ -55,6 +55,8 @@ gem "bootstrap_form", git: "https://github.com/bootstrap-ruby/bootstrap_form.git
 gem 'devise'
 # Use devise-bootstrap-views to generate authentication related views in bootstrap 4
 gem 'devise-bootstrap-views'
+#
+gem 'rails_admin', '~> 1.3.0'
 # Use sendgrid for confirmation email
 gem 'sendgrid'
 # Use carrierwave as file uploader
