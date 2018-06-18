@@ -14,8 +14,11 @@
   <div class="container"
     <div class="row">
       <%= bootstrap_form_for @estate do |f| %>
-        <%= f.text_field :estate_address, class: "form-control" %>
-        <%= f.text_field :area, class: "form-control" %>
+        <%= f.text_field :address_line_1, class: "form-control" %>
+        <%= f.text_field :address_line_2, class: "form-control" %>
+        <%= f.text_field :town, class: "form-control" %>
+        <%= f.text_field :county, class: "form-control" %>
+        <%= f.text_field :postal_code, class: "form-control" %>       
         <%= f.number_field :bedrooms, class: "form-control" %>
         <%= f.number_field :bathrooms, class: "form-control" %>
         <%= f.number_field :square_footage, append: "ft", class: "form-control" %>

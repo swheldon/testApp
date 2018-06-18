@@ -10,11 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180517044459) do
+ActiveRecord::Schema.define(version: 20180618231501) do
 
   create_table "estates", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.text "estate_address"
-    t.text "area"
     t.integer "bedrooms"
     t.integer "bathrooms"
     t.integer "square_footage"
@@ -22,6 +20,11 @@ ActiveRecord::Schema.define(version: 20180517044459) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image"
+    t.text "address_line_1"
+    t.text "address_line_2"
+    t.text "town"
+    t.text "county"
+    t.text "postal_code"
   end
 
   create_table "photos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -33,7 +36,6 @@ ActiveRecord::Schema.define(version: 20180517044459) do
   create_table "tenants", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text "last_name"
     t.text "first_name"
-    t.text "address"
     t.text "phone_number"
     t.text "email"
     t.text "employment_status"
@@ -45,6 +47,11 @@ ActiveRecord::Schema.define(version: 20180517044459) do
     t.text "special_requirements"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "address_line_1"
+    t.text "address_line_2"
+    t.text "town"
+    t.text "county"
+    t.text "postal_code"
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -67,6 +74,9 @@ ActiveRecord::Schema.define(version: 20180517044459) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "admin", default: false
+    t.boolean "approved", default: false, null: false
+    t.index ["approved"], name: "index_users_on_approved"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

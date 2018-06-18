@@ -7,9 +7,13 @@ class EmailValidator < ActiveModel::EachValidator
 end
 
 class Tenant < ApplicationRecord
-	validates :last_name, presence: true, length: { maximum: 40 }
-	validates :first_name, presence: true, length: { maximum: 5 }
-	validates :address, presence: true, length: { minimum: 5 }
+	validates :last_name, presence: true, length: { maximum: 80 }
+	validates :first_name, presence: true, length: { maximum: 40}
+	validates :address_line_1, presence: true, length: { maximum: 255 }
+	validates :address_line_2, length: { maximum: 255 }
+	validates :town, presence: true, length: { maximum: 35 }
+	validates :county, length: { maximum: 255 }
+	validates :postal_code, presence: true, length: { maximum: 8 }
 	validates :phone_number, presence: true, uniqueness: true, length: { maximum: 16 }
 	validates :email, presence: true, email: true, uniqueness: true, length: { maximum: 80 }
 	validates :tenant_count, presence: true, length: { maximum: 2 }

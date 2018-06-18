@@ -9,8 +9,11 @@
       <table id="estates" class="display dt-responsive colreorder select-item" style="width:100%">
         <thead>
           <tr>
-            <th>Estate address</th>
-            <th>Area</th>
+            <th>Address Line 1</th>
+            <th>Address Line 2</th>
+            <th>Town</th>
+            <th>County</th>
+            <th>Postal Code</th>
             <th>Bedrooms</th>
             <th>Bathrooms</th>
             <th>Square footage</th>
@@ -23,8 +26,11 @@
         <tbody>
           <% @estates.each do |estate| %>
           <tr>
-            <td><%= estate.estate_address %></td>
-            <td><%= estate.area %></td>
+            <td><%= estate.address_line_1 %></td>
+            <td><%= estate.address_line_2 %></td>
+            <td><%= estate.town %></td>
+            <td><%= estate.county %></td>
+            <td><%= estate.postal_code %></td>
             <td><%= estate.bedrooms %></td>
             <td><%= estate.bathrooms %></td>
             <td><%= "#{estate.square_footage} ft" %></td>

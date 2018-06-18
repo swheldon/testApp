@@ -15,7 +15,11 @@
       <%= bootstrap_form_for(@tenant) do |f| %>
         <%= f.text_field :last_name, class: "form-control" %>
         <%= f.text_field :first_name, class: "form-control" %>
-        <%= f.text_field :address, class: "form-control" %>
+        <%= f.text_field :address_line_1, class: "form-control" %>
+        <%= f.text_field :address_line_2, class: "form-control" %>
+        <%= f.text_field :town, class: "form-control" %>
+        <%= f.text_field :county, class: "form-control" %>
+        <%= f.text_field :postal_code, class: "form-control" %>
         <%= f.text_field :phone_number, class: "form-control" %>
         <%= f.text_field :email, class: "form-control" %>
         <%= f.select :employment_status, [["Employed", "Employed"], ["Unemployed", "Unemployed"]], class: "form-control" %>
