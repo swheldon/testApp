@@ -2,7 +2,7 @@
  <div class="row">
 <p><%= t('.greeting', recipient: @resource.email, default: "Welcome #{@resource.email}!") %></p>
 
-<p><%= t('.instruction', default: 'You can confirm your account email through the link below:') %></p>
+<p><%= t('.instruction', default: 'Both account email confirmation and administrator approval are required prior to first login. An approval request has been sent to the administrator. You can confirm your account email through the link below:') %></p>
 
 <p>
   <%= link_to t('.action', default: 'Confirm my account'),
