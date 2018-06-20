@@ -31,7 +31,16 @@
           <%= @estate.postal_code %>
         </p>
 
-        
+        <p>
+          <strong>Reference ID</strong>
+          <%= @estate.sRef_ID %>
+        </p>
+
+        <p>
+          <strong>Available Date</strong>
+          <%= @estate.available_date %>
+        </p>
+
         <p>
           <strong>Bedrooms:</strong>
           <%= @estate.bedrooms %>
@@ -51,7 +60,36 @@
           <strong>Rent:</strong>
           <%= @estate.rent %>
         </p>
+
+        <p>
+          <strong>Web Url:</strong>
+          <%= @estate.web %>
+        </p>
                 
+        <p>
+          <strong>Rightmove Url:</strong>
+          <%= @estate.rightmove %>
+        </p>
+                
+        <p>
+          <strong>Gumtree Url:</strong>
+          <%= @estate.gumtree %>
+        </p>
+                
+        <p>
+          <strong>Estate Web Url:</strong>
+          <%= @estate.estate_web %>
+        </p>
+                
+        <p>
+          <strong>Agent 1 Url:</strong>
+          <%= @estate.agent_1 %>
+        </p>
+              
+        <p>
+          <strong>Agent 2 Url:</strong>
+          <%= @estate.agent_2 %>
+        </p>  
         
         <%= link_to 'Edit', edit_estate_path(@estate) %> |
         <%= link_to 'Back', estates_path %>

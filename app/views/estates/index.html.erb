@@ -14,10 +14,18 @@
             <th>Town</th>
             <th>County</th>
             <th>Postal Code</th>
+            <th>Reference ID</th>
+            <th>Available Date</th> 
             <th>Bedrooms</th>
             <th>Bathrooms</th>
+            <th>Web Url</th>
+            <th>RightMove Url</th>
+            <th>Gumtree Url</th>
+            <th>Estate Web Url</th>
+            <th>Agent 1 Url</th>
+            <th>Agent 2 Url</th>
             <th>Square footage</th>
-            <th>Rent</th>
+            <th>Rent per week</th>
             <th></th>
             <th></th>
             <th></th>
@@ -31,9 +39,17 @@
             <td><%= estate.town %></td>
             <td><%= estate.county %></td>
             <td><%= estate.postal_code %></td>
+            <td><%= estate.sRef_ID %></td>
+            <td><%= estate.available_date %></td>
             <td><%= estate.bedrooms %></td>
             <td><%= estate.bathrooms %></td>
-            <td><%= "#{estate.square_footage} ft" %></td>
+            <td><%= estate.web %></td>
+            <td><%= estate.rightmove %></td>
+            <td><%= estate.gumtree %></td>
+            <td><%= estate.estate_web %></td>
+            <td><%= estate.agent_1 %></td>
+            <td><%= estate.agent_2 %></td>
+            <td><%= estate.square_footage %></td>
             <td><%= number_to_currency estate.rent %></td>
             <td><%= link_to 'Show', estate %></td>
             <td><%= link_to 'Edit', edit_estate_path(estate) %></td>
