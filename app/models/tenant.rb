@@ -20,7 +20,7 @@ class Tenant < ApplicationRecord
 	validates :move_in_date, presence: true, length: { maximum: 10 }
 	validates :term_months, presence: true, length: { maximum: 3 }
 	validates :budget, presence: true, length: { maximum: 8 }
-	validates :estate_id, presence: true
+	validates :estate_id, uniqueness: true
 
 	belongs_to :estate
 end
