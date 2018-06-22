@@ -26,7 +26,7 @@
         <%= f.text_field :email, class: "form-control" %>
         <%= f.select :employment_status, [["Employed", "Employed"], ["Unemployed", "Unemployed"]], class: "form-control" %>
         <%= f.number_field :tenant_count, class: "form-control" %>
-        <%= f.text_field :move_in_date, data:{ provide:'datepicker', class: "form-control" } %>
+        <%= f.text_field :move_in_date, data:{ provide:'datepicker', 'date-format' => 'mm/dd/yyyy', 'date-autoclose' => 'true' }, class: "form-control", placeholder: 'MM/DD/YYYY' %>
         <%= f.number_field :term_months, class: "form-control" %>
         <%= f.select :furnished, [["Furnished", "Furnished"], ["Unfurnished", "Unfurnished"]], class: "form-control" %>
         <%= f.text_field :lead_source, class: "form-control" %>

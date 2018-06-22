@@ -20,7 +20,7 @@
         <%= f.text_field :county, class: "form-control" %>
         <%= f.text_field :postal_code, class: "form-control" %>
         <%= f.text_field :sRef_ID, class: "form-control" %>
-        <%= f.date_field :available_date, data:{ provide:'datepicker', class: "form-control" } %>
+        <%= f.date_field :available_date, data:{ provide:'datepicker', 'date-format' => 'mm/dd/yyyy', 'date-autoclose' => 'true' }, class: "form-control", placeholder: 'MM/DD/YYYY' %>
         <%= f.number_field :bedrooms, class: "form-control" %>
         <%= f.number_field :bathrooms, class: "form-control" %>
         <%= f.number_field :square_footage, class: "form-control" %>
@@ -38,4 +38,3 @@
     </div>
   </div>
 <% end %>
-      

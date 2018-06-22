@@ -29,7 +29,7 @@
             <th>Url 5</th>
             <th>Url 6</th>
             <th>Special Requirements</th>
-            <th>Notes<th>
+            <th>Notes</th>
             <th></th>
             <th></th>
             <th></th>
@@ -41,16 +41,20 @@
             <td><%= tenant.last_name %></td>
             <td><%= tenant.first_name %></td>
             <td><%= tenant.estate.try(&:address_line_1) %>
+            ,
             <%= tenant.estate.try(&:address_line_2) %>
             , 
             <%= tenant.estate.try(&:town) %>
+            ,
             <%= tenant.estate.try(&:county) %>
             ,
             <%= tenant.estate.try(&:postal_code) %></td>
             <td><%= tenant.address_line_1%>
+             ,
              <%= tenant.address_line_2 %>
              , 
              <%= tenant.town %>
+             ,
              <%= tenant.county %>
              ,
              <%= tenant.postal_code %></td>
