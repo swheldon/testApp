@@ -13,7 +13,8 @@
              
         <p>
           <strong>Occupied Estate</strong>
-          <%= @tenant.estate.address_line_1 + ', ' + @tenant.estate.address_line_2 + ', ' + @tenant.estate.town  ', ' + @tenant.estate.county + ', ' + @tenant.estate.postal_code %>
+          <%= @tenant.estate.address_line_1 + ', ' + @tenant.estate.address_line_2 + ', ' + @tenant.estate.town + ', ' + @tenant.estate.county + ', ' + @tenant.estate.postal_code unless @tenant.estate_id.nil? %>
+
         <p>
           <strong>Tenant Current Address</strong>
           <%= @tenant.address_line_1 + ', ' + @tenant.address_line_2 + ', ' + @tenant.town + ', ' + @tenant.county + ', ' + @tenant.postal_code %>
