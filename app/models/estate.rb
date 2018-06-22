@@ -13,6 +13,8 @@ class Estate < ApplicationRecord
 	validates :rent, presence: true, length: { maximum: 6, too_long: "%{count} characters is the maximum allowed" }
 	#mount_uploader :image, ImageUploader	
 
+	has_one :tenant
+
 	before_create do
     self.available_date = Date.today unless self.available_date
     end

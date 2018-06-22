@@ -21,6 +21,7 @@
         <%= f.text_field :town, class: "form-control" %>
         <%= f.text_field :county, class: "form-control" %>
         <%= f.text_field :postal_code, class: "form-control" %>
+        <%= f.text_field :estate_id, class: "form-control" %>
         <%= f.text_field :phone_number, class: "form-control" %>
         <%= f.text_field :email, class: "form-control" %>
         <%= f.select :employment_status, [["Employed", "Employed"], ["Unemployed", "Unemployed"]], class: "form-control" %>
@@ -30,6 +31,14 @@
         <%= f.select :furnished, [["Furnished", "Furnished"], ["Unfurnished", "Unfurnished"]], class: "form-control" %>
         <%= f.text_field :lead_source, class: "form-control" %>
         <%= f.text_field :special_requirements, class: "form-control" %>
+        <%= f.text_field :budget, class: "form-control" %>
+        <%= f.text_field :url_1, class: "form-control" %>
+        <%= f.text_field :url_2, class: "form-control" %>
+        <%= f.text_field :url_3, class: "form-control" %>
+        <%= f.text_field :url_4, class: "form-control" %>
+        <%= f.text_field :url_5, class: "form-control" %>
+        <%= f.text_field :url_6, class: "form-control" %>
+        <%= f.text_field :notes, class: "form-control" %>
         <%= f.submit "Add Tenant"%>
       <% end %>
     </div>

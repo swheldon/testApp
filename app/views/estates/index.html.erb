@@ -1,19 +1,16 @@
 <div class="jumbotron">
 <div class="container">
   <h1><strong>All Estates</strong></h1>
-    <p>Here you can create new estates or search for estates based on your desired criteria. You can also show, update or delete individual estates. The table below is able to be highlighted and copied.</p>
-  <p><a class="btn btn-primary btn-lg" href="estates/new" role="button">New estate &raquo;</a></p>
+   <p>Here you can create new estates or search for estates based on your desired criteria. You can also show, update or delete individual estates.</p>
+   <p><a class="btn btn-primary btn-lg" href="estates/new" role="button">New estate &raquo;</a></p>
 </div>
 </div>
 <div class="container">    
-      <table id="estates" class="display dt-responsive colreorder select-item" style="width:100%">
+      <table id="estates" class="display dt-responsive colreorder" style="width:100%">
         <thead>
           <tr>
-            <th>Address Line 1</th>
-            <th>Address Line 2</th>
-            <th>Town</th>
-            <th>County</th>
-            <th>Postal Code</th>
+            <th>ID</th>
+            <th>Address</th>
             <th>Reference ID</th>
             <th>Available Date</th> 
             <th>Bedrooms</th>
@@ -34,11 +31,14 @@
         <tbody>
           <% @estates.each do |estate| %>
           <tr>
-            <td><%= estate.address_line_1 %></td>
-            <td><%= estate.address_line_2 %></td>
-            <td><%= estate.town %></td>
-            <td><%= estate.county %></td>
-            <td><%= estate.postal_code %></td>
+            <td><%= estate.id %></td>
+            <td><%= estate.address_line_1 %>
+            <%= estate.address_line_2 %>
+            ,
+            <%= estate.town %> 
+            <%= estate.county %>
+            ,  
+            <%= estate.postal_code %></td>
             <td><%= estate.sRef_ID %></td>
             <td><%= estate.available_date %></td>
             <td><%= estate.bedrooms %></td>
@@ -50,7 +50,7 @@
             <td><%= estate.agent_1 %></td>
             <td><%= estate.agent_2 %></td>
             <td><%= estate.square_footage %></td>
-            <td><%= number_to_currency estate.rent %></td>
+            <td><%= estate.rent %></td>
             <td><%= link_to 'Show', estate %></td>
             <td><%= link_to 'Edit', edit_estate_path(estate) %></td>
             <td><%= link_to 'Destroy', estate, 

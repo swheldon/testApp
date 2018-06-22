@@ -74,7 +74,7 @@ class TenantsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tenant_params
-      params.require(:tenant).permit(:last_name, :first_name, :address_line_1, :address_line_2, :town, :county, :postal_code, :phone_number, :email, :employment_status, :tenant_count, :move_in_date, :term_months, :furnished, :lead_source, :special_requirements)
+      params.require(:tenant).permit(:last_name, :first_name, :address_line_1, :address_line_2, :town, :county, :postal_code, :phone_number, :email, :employment_status, :tenant_count, :move_in_date, :term_months, :furnished, :lead_source, :special_requirements, :estate_id, :budget, :url_1, :url_2, :url_3, :url_4, :url_5, :url_6, :notes)
     end
 end
 

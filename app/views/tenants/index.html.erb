@@ -1,7 +1,7 @@
 <div class="jumbotron">
 <div class="container">
   <h1><strong>All Tenants</strong></h1>
-  <p>Here you can create new tenants and search for tenants based on your desired criteria. You can also show, update or delete individual tenants. The table below is able to be highlighted and copied.</p>
+  <p>Here you can create new tenants and search for tenants based on your desired criteria. You can also show, update or delete individual tenants.</p>
   <p><a class="btn btn-primary btn-lg" href="tenants/new" role="button">New tenant &raquo;</a></p>
 </div>
 </div>
@@ -11,20 +11,25 @@
           <tr>
             <th>Last Name</th>
             <th>First Name</th>
-            <th>Address Line 1</th>
-            <th>Address Line 2</th>
-            <th>Town</th>
-            <th>County</th>
-            <th>Postal Code</th>
+            <th>Occupied Estate Address</th>
+            <th>Pre Movein Address</th>
             <th>Phone Number</th>
             <th>Email</th>
+            <th>Budget</th>
             <th>Employment Status</th>
             <th>Tenant Count</th>
             <th>Move In Date</th>
             <th>Term Months</th>
             <th>Furnished</th>
             <th>Lead Source</th>
+            <th>Url 1</th>
+            <th>Url 2</th>
+            <th>Url 3</th>
+            <th>Url 4</th>
+            <th>Url 5</th>
+            <th>Url 6</th>
             <th>Special Requirements</th>
+            <th>Notes<th>
             <th></th>
             <th></th>
             <th></th>
@@ -35,20 +40,37 @@
           <tr>
             <td><%= tenant.last_name %></td>
             <td><%= tenant.first_name %></td>
-            <td><%= tenant.address_line_1 %></td>
-            <td><%= tenant.address_line_2 %></td>
-            <td><%= tenant.town %></td>
-            <td><%= tenant.county %></td>
-            <td><%= tenant.postal_code %></td>
+            <td><%= tenant.estate.try(&:address_line_1) %>
+            <%= tenant.estate.try(&:address_line_2) %>
+            , 
+            <%= tenant.estate.try(&:town) %>
+            <%= tenant.estate.try(&:county) %>
+            ,
+            <%= tenant.estate.try(&:postal_code) %></td>
+            <td><%= tenant.address_line_1%>
+             <%= tenant.address_line_2 %>
+             , 
+             <%= tenant.town %>
+             <%= tenant.county %>
+             ,
+             <%= tenant.postal_code %></td>
             <td><%= tenant.phone_number %></td>
             <td><%= tenant.email %></td>
+            <td><%= tenant.budget %></td>
             <td><%= tenant.employment_status %></td>
             <td><%= tenant.tenant_count %></td>
             <td><%= tenant.move_in_date %></td>
             <td><%= tenant.term_months %></td>
             <td><%= tenant.furnished %></td>
             <td><%= tenant.lead_source %></td>
+            <td><%= tenant.url_1 %></td>
+            <td><%= tenant.url_2 %></td>
+            <td><%= tenant.url_3 %></td>
+            <td><%= tenant.url_4 %></td>
+            <td><%= tenant.url_5 %></td>
+            <td><%= tenant.url_6 %></td>
             <td><%= tenant.special_requirements %></td>
+            <td><%= tenant.notes %></td>
             <td><%= link_to 'Show', tenant %></td>
             <td><%= link_to 'Edit', edit_tenant_path(tenant) %></td>
             <td><%= link_to 'Destroy', tenant, 
