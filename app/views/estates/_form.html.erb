@@ -19,6 +19,8 @@
         <%= f.text_field :town, class: "form-control" %>
         <%= f.text_field :county, class: "form-control" %>
         <%= f.text_field :postal_code, class: "form-control" %>
+        <%= f.select :status, [["Available", "Available"], ["Reserved", "Reserved"], ["Occupied", "Occupied"]], class: "form-control" %>       
+
         <%= f.text_field :sRef_ID, class: "form-control" %>
         <%= f.date_field :available_date, class: "form-control", placeholder: 'MM/DD/YYYY' %>
         <%= f.number_field :bedrooms, class: "form-control" %>
