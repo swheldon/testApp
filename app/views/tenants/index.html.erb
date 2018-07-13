@@ -9,13 +9,12 @@
       <table id="tenants" class="display dt-responsive colreorder select-item" style="width:100%">
         <thead>
           <tr>
-            <th>Last Name</th>
-            <th>First Name</th>
+            <th>Name</th>
             <th>Occupied Estate Address</th>
             <th>Pre Movein Address</th>
             <th>Phone Number</th>
             <th>Email</th>
-            <th>Budget</th>
+            <th>Budget Per Week</th>
             <th>Employment Status</th>
             <th>Tenant Count</th>
             <th>Move In Date</th>
@@ -38,8 +37,9 @@
         <tbody>
           <% @tenants.each do |tenant| %>
           <tr>
-            <td><%= tenant.last_name %></td>
-            <td><%= tenant.first_name %></td>
+            <td><%= tenant.first_name %>
+            , 
+            <%= tenant.last_name %></td>
             <td><%= tenant.estate.try(&:address_line_1) %>
             ,
             <%= tenant.estate.try(&:address_line_2) %>

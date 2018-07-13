@@ -16,7 +16,7 @@ class Estate < ApplicationRecord
 	has_one :tenant
 
 	before_create do
-    self.available_date = Date.today unless self.available_date
+    self.available_date = Time.now.strftime("%d/%m/%Y") unless self.available_date
     end
 end
 

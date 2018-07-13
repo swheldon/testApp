@@ -18,7 +18,7 @@ class Tenant < ApplicationRecord
 	validates :email, presence: true, email: true, uniqueness: true, length: { maximum: 80 }
 	validates :tenant_count, presence: true, length: { maximum: 2 }
 	validates :move_in_date, presence: true, length: { maximum: 10 }
-	validates_format_of :move_in_date, :with => /\d{2}\/\d{2}\/\d{4}/, :message => "^Date must be in the following format: mm/dd/yyyy"
+	validates_format_of :move_in_date, :with => /\d{2}\/\d{2}\/\d{4}/, :message => "^Date must be in the following format: dd/mm/yyyy"
 	validates :term_months, presence: true, length: { maximum: 3 }
 	validates :budget, presence: true, length: { maximum: 8 }
 	validates :estate_id, allow_nil: true, uniqueness: true
